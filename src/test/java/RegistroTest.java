@@ -1,32 +1,29 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
 class RegistroTest {
+    Registro registro;
+    String[][] arrayPrueba = new String[50][3];
 
-    @BeforeEach
+    @org.junit.jupiter.api.BeforeEach
     void setUp() {
+        registro = new Registro();
     }
 
-    @AfterEach
-    void tearDown() {
-    }
 
-    @Test
-    void main() {
-    }
-
-    @Test
+    @org.junit.jupiter.api.Test
     void obtenerUltimoEspacio() {
+        assertEquals(Registro.ultimoIndex(arrayPrueba), 50);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void verificarEspacio() {
+        assertTrue(Registro.ultimoIndex(arrayPrueba) != 0);
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     void ultimoIndex() {
+        assertEquals(arrayPrueba.length - Registro.ultimoIndex(arrayPrueba), 0);
     }
 }
