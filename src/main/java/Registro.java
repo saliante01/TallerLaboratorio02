@@ -198,8 +198,5 @@ public class Registro {
 
         return 0;
     }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/Sandoval
